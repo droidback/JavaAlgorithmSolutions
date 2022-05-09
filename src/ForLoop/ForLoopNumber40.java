@@ -1,0 +1,18 @@
+package ForLoop;
+
+import java.util.Scanner;
+
+public class ForLoopNumber40 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter A and B (A < B): ");
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+
+        for (int i = 1; i <= b - a + 1; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.printf("%4d ", a + i - 1);
+            }
+        }
+    }
+}

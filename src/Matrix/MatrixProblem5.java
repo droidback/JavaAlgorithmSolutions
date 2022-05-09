@@ -1,0 +1,26 @@
+package Matrix;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MatrixProblem5 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int m = scan.nextInt(), n = scan.nextInt();
+        int[][] matrix = new int[m][n];
+        int[] a = new int[m];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = scan.nextInt();
+        }
+        int d = scan.nextInt();
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = a[i] + d * j;
+            }
+        }
+        for (int[] b : matrix) {
+            System.out.println(Arrays.toString(b));
+        }
+    }
+}
